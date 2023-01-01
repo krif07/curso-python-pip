@@ -9,7 +9,8 @@ def run():
 
   countries = df['Country'].values
   percentages = df['World Population Percentage'].values
-  charts.generate_pie_chart(countries, percentages)  
+  charts.generate_pie_chart(countries, percentages)
+  print('Generado para el continente: ', continent)
 
 if __name__ == '__main__':
   run()
