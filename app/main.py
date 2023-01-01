@@ -1,27 +1,15 @@
-import utils
-
-data = [{
-  'Country': 'Colombia',
-  'Population': 350
-}, {
-  'Country': 'Perú',
-  'Population': 250
-}, {
-  'Country': 'Bolivia',
-  'Population': 200
-}]
+import charts
+import pandas as pa
 
 
 def run():
-  keys, values = utils.get_population()
-  print(keys, values)
-  print(utils.message) 
+  continent = input('Continent ==> ')
+  df = pa.read_csv('data.csv')
+  df = df[df['Continent'] == continent]
 
-  country = input('Type country: ')
-
-  result = utils.get_population_by_country(data, country)
-  print(result)
-
+  countries = df['Country'].values
+  percentages = df['World Population Percentage'].values
+  charts.generate_pie_chart(countries, percentages)  
 
 if __name__ == '__main__':
   run()

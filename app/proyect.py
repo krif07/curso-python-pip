@@ -2,7 +2,6 @@ import charts
 import utils
 import read_csv
 
-
 def generate_population_chart_by_country(country):
   data = read_csv.read_csv('data.csv')
   country_list = utils.get_population_by_country(data, country)
