@@ -18,6 +18,7 @@ def get_contact():
         <h1>Página de contacto</h1>
         <p>Cristian Dávila</p>
         <p>krif07@gmail.com</p>
+        <p>Test Automation Engineer</p>
     """
 
 def run():
