@@ -18,6 +18,24 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 
+# App Project con Docker
+
+```
+cd app
+# construir la app
+docker-compose build
+# para bajar el contenedor
+docker-compose down
+# para correr el contenedor
+docker-compose up -d
+# para listar los contenedores activos
+docker-compose ps
+# correr la app dentro del contenedor
+docker-compose exec app-csv bash
+# en el bash del contendor
+python main.py
+```
+
 # web-server Project
 
 ```sh
